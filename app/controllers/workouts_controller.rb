@@ -29,10 +29,12 @@ class WorkoutsController < ApplicationController
       redirect_to @workout
     else
       render 'edit'
-    end 
+    end
   end
 
   def destroy
+    @workout.destroy
+    redirect_to root_path
   end
 
   private
